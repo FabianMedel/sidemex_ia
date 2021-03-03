@@ -1,0 +1,51 @@
+  <!-- Modal Structure -->
+  <div id="mlogin" class="modal">
+    <div class="modal-content col s4">
+      <div class="user-view center">
+        <img id="cic-cloud-logo" class="circle responsive-img" src="Assets/images/login1.png" width="140" height="140">
+      </div>
+      <div class="center">
+        <img id="cic-cloud-text" class="responsive-img" src="Assets/images/Login2.png"  width="93" height="79">
+      </div>
+      <div class="input-field center col s4">
+        <i class="material-icons prefix">person</i>
+        <input id="username" type="text" class="validate" name="username" required="">
+        <label for="username">E-mail</label>
+      </div>
+      <div id="msl"></div>
+      <div class="input-field col s4 ">
+        <i class="material-icons prefix ">lock</i>
+        <input id="password" type="password" class="validate " name="password" required="">
+        <label for="password" >contraseña</label>
+      </div>
+      <div id="loginMess"></div>
+      <div class="center">
+        <button class="btn waves-effect waves-light" id="sess" >Iniciar sesión</button><br><br>
+        <button type="button" style="border-radius: 25px;" class="modal-close waves-effect waves-light btn grey lighten-1">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+  
+      $('.modal').modal();
+
+      $('#sess').click( function(){
+        let user = $("#username").val();
+        let pass = $("#password").val();
+
+        if(user != "" && pass != ""){
+          $.post("auth",{username:user, password:pass},function(data,status){
+            alert(data);
+            if(data.succes ==='done'){
+              window.location.href="/home";
+            }else if (data == 'failed') {
+              alert("correo o contraseña erroneo")
+              //$('#loginMess').empty().html('<center><p>correo y/o contraseña erróneo</p></center>');
+            }
+          });
+        }
+      });
+    });
+  </script>
