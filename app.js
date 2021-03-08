@@ -53,14 +53,14 @@ app.post('/auth',async function(req, res) {
 	var username = req.body.username;
 	var password = req.body.password;
 	req.session.logged = false;
-
+	console.log(username)
 	if (username && password) {
 
 		dcConnection = await utils.createConnection(utils.sia_local);
 		//console.log(utils.login(dcConnection));
 		dcConnection.query('SELECT * FROM SIDEMEX_IA.USERS WHERE correo = ? AND contrasena = ?', [username, password], function(error, results, fields) {
-			if (results.length > 0) {
-				console.log(results);
+			if ( results.length > 0) {
+				console.log(results.length);
 				req.session.logged = true;
 				req.session.username = username;
 				req.session.password = password;
@@ -71,11 +71,20 @@ app.post('/auth',async function(req, res) {
 					error_menssage: 'Ok'
 				   };
 				  console.log("User exists");
-				  res.send(respuesta);
+				  res.json(respuesta);
 				  
-			} else {
+			}else{
+				console.log("aqui")
+				//results = false;
+				console.log(results);
+				let respuesta = {
+					status: "failed",
+					status_error: 200,
+					objects: results,
+					error_menssage: 'Ok'
+				   };
 				console.log("user doesn\'t exist");
-				res.end('failed');
+				res.json(respuesta);
 			}			
 			res.end();
 		});
@@ -91,6 +100,8 @@ app.get('/home', function(req, res) {
 	sess=req.session;
 	if(sess.logged){
 		res.render('home.ejs');
+	}else{
+		res.send('Please login to view this page!');
 	}
 });
 
@@ -110,3 +121,6 @@ var server = app.listen(process.env.PORT, function(){
 	console.log('server running on ' + process.env.PORT);
 });
 
+app.get('/index', (req, res) => {
+ res.render("index")
+})

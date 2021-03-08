@@ -37,12 +37,10 @@
 
         if(user != "" && pass != ""){
           $.post("auth",{username:user, password:pass},function(data,status){
-            alert(data);
-            if(data.succes ==='done'){
+            if(data.status ==='done'){
               window.location.href="/home";
-            }else if (data == 'failed') {
-              alert("correo o contraseña erroneo")
-              //$('#loginMess').empty().html('<center><p>correo y/o contraseña erróneo</p></center>');
+            }else if (data.status === 'failed') {
+              $('#loginMess').empty().html('<center><p>correo y/o contraseña erróneo</p></center>');
             }
           });
         }
