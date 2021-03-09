@@ -1,5 +1,8 @@
-var mysql = require('mysql');
-var middleware = require('./../middleware');
+let mysql = require('mysql');
+var Response = require('./classes');
+let jwt = require('jsonwebtoken');
+//let middleware = require('./../middleware');
+
 
 
 
@@ -18,8 +21,28 @@ async function createConnection(dbConn){
     return conn;
 };
 
-async function login(dbConn){
-    console.log();
+async function signin(dbConn,user, password,req){
+    let sql = 'SELECT idUsuario, nombre, apellido, correo FROM SIDEMEX_IA.USERS WHERE correo = \"'+user+'\" AND contrasena = \"'+password+'\"';
+   
+    return new Promise(function(resolve, reject){
+        dbConn.query(sql, function(error, results, fields) {
+            if (results.length > 0) {
+                //jwt.sign({user},"sidemex_ia_uacm",(err,token)=> {
+                    let splashResponse = new Response("done",200,results,"OK",null);
+                    req.session.logged = true;
+		            req.session.username = user;
+		            req.session.password = password;
+                    console.log("user exist");
+                    return resolve(splashResponse);
+                //});
+                
+            }else{
+                let splashResponse = new Response("failed",403,results,"OK",null);
+                console.log("user doesn\'t exist");
+                return resolve(splashResponse);
+            }
+        });
+    });
 
 }
   
@@ -33,6 +56,6 @@ module.exports = {
     sia_local : sia_local,
     createConnection : createConnection,
     closeConnection : closeConnection,
-    login:login
+    signin:signin
 };
   

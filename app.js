@@ -1,5 +1,6 @@
 require('dotenv').config()
 var utils = require('./utils/utils');
+var Response = require('./utils/classes');
 var createError = require('http-errors');
 var express = require('express');
 var session = require('express-session');
@@ -7,9 +8,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
+const { json } = require('express');
 var router = express.Router();
 var app = express();
 var sess;
+let response;
 
 // view engine setup
 app.set('views', __dirname+ '/www');
@@ -53,44 +56,13 @@ app.post('/auth',async function(req, res) {
 	var username = req.body.username;
 	var password = req.body.password;
 	req.session.logged = false;
-	console.log(username)
+
 	if (username && password) {
-
 		dcConnection = await utils.createConnection(utils.sia_local);
-		//console.log(utils.login(dcConnection));
-		dcConnection.query('SELECT * FROM SIDEMEX_IA.USERS WHERE correo = ? AND contrasena = ?', [username, password], function(error, results, fields) {
-			if ( results.length > 0) {
-				console.log(results.length);
-				req.session.logged = true;
-				req.session.username = username;
-				req.session.password = password;
-				let respuesta = {
-					status: "done",
-					status_error: 200,
-					objects:results,
-					error_menssage: 'Ok'
-				   };
-				  console.log("User exists");
-				  res.json(respuesta);
-				  
-			}else{
-				console.log("aqui")
-				//results = false;
-				console.log(results);
-				let respuesta = {
-					status: "failed",
-					status_error: 200,
-					objects: results,
-					error_menssage: 'Ok'
-				   };
-				console.log("user doesn\'t exist");
-				res.json(respuesta);
-			}			
-			res.end();
-		});
-
+		splashResponse = await utils.signin(dcConnection,username,password,req);
+		res.json(splashResponse)
+		res.end();
 	} else {
-
 		res.send('Please enter Username and Password!');
 		res.end();
 	}
