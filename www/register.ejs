@@ -1,0 +1,47 @@
+<div id="mRegister" class="modal">
+    <div class="modal-content col s4">
+        <div class="modal-header col s10" >
+            <div class="center">
+                <img id="cic-cloud-text" class="responsive-img" src="Assets/images/logo title.png"  width="93" height="79">
+            </div>
+        </div>
+        <div class="modal-body col s12">  
+            <div class="row">  
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_device" type="text" class="validate" name="nombre" required="" >
+                    <label for="icon_device">Nombre</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate" name="apellido" required="" >
+                    <label for="last_name">Apellidos</label>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">mail</i>
+                    <input id="mailf" type="text" class="validate" name="email" required="" placeholder="usuario@mail">
+                    <label for="mailf">E-mail</label>
+                    <span class="helper-text" data-error="wrong" data-success="right" id="messgeCV"><center>Correo</center></span>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
+                    <input id="passV" type="password" class="validate" name="contrasena" required="">
+                    <label for="passV">Contraseña</label>
+                </div>
+                <div id="res"></div>
+            </div>
+            <div class="modal-footer col s12">
+                <button type="button" class="modal-close waves-effect waves-red btn pink darken-3">Cerrar</button>
+                <button id="sendReg" class="waves-effect waves-light btn" style="background-color: #003366;">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('.modal').modal();
+    });
+</script>

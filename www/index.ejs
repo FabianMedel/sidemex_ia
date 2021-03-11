@@ -1,40 +1,49 @@
-<html>
-<head>
-<title></title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<%- include('inc/head.ejs') %>
+<%- include('inc/header.ejs') %>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="Assets/images/sidemex-ia-1.png">
+                <div class="caption center-align">
+                    <h3>
+                        Sidemex IA
+                    </h3>
+                    <h5>
+                      Sistema Inteligente de Incidencia Delictiva en México.
+                    </h5>
+                </div>
+            </li>
+            <li>
+                <img src="Assets/images/sidemex-ia-2.png">
+                <div class="caption center-align">
+                    <h3 class="inicerebro">
+                      Sidemex IA
+                    </h3>
+                    <h5>
+                      Sistema Inteligente de Incidencia Delictiva en México.
+                    </h5>
+                </div>
 
-   <!-- Compiled and minified CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            </li>
+            <li>
+                <img src="Assets/images/sidemex-ia-3.jpg">
+            </li>
+        </ul>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script>
+        var options = {
+            indicators:true,
+            height:500,
+            duration:500,
+            interval:6000
 
-   <!-- Compiled and minified JavaScript -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-           
+        };
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems, options);
+        });
+        //M.AutoInit();
+    </script>
 
-</head>
-<body>
-
- <div class="input-field col s12">
-   <select id="select1">
-     <option value="" disabled selected>Choose your option</option>
-     <option value="1">Option 1</option>
-     <option value="2">Option 2</option>
-     <option value="3">Option 3</option>
-   </select>
-   <label>Materialize Select</label>
- </div><br><br><br><br><br>
- 
- <input type="text" class="datepicker">
-
-   
-
- <script type="text/javascript">
-  $(document).ready(function(){
-   
-     $('#select1').formSelect();
-     $('.datepicker').datepicker();
-
-   });
- </script>
-         
-</body>
-</html>
+<%- include('inc/footer.ejs') %>

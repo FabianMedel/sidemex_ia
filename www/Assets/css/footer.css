@@ -8,6 +8,6 @@ main {
 	flex: 1 0 auto;
 }
 
-.footer-color {
-	background-color: black;
+.footer-color-primary {
+	background-color: #003366;
 }

@@ -2,15 +2,53 @@
 <%- include('inc/header.ejs') %>
 
 <%- include('login.ejs') %>
+<%- include('register.ejs') %>
 
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="Assets/images/sidemex-ia-1.png">
+            <div class="caption center-align">
+                <h3>
+                    Sidemex IA
+                </h3>
+                <h5>
+                  Sistema Inteligente de Incidencia Delictiva en México.
+                </h5>
+            </div>
+        </li>
+        <li>
+            <img src="Assets/images/sidemex-ia-2.png">
+            <div class="caption center-align">
+                <h3 class="inicerebro">
+                  Sidemex IA
+                </h3>
+                <h5>
+                  Sistema Inteligente de Incidencia Delictiva en México.
+                </h5>
+            </div>
 
-<h1>Sidemex ia</h1>
-<h1>Sidemex ia</h1>
-<h1>Sidemex ia</h1>
-<h1>Sidemex ia</h1>
-<h1>Sidemex ia</h1>
-<h1>Sidemex ia</h1>
-<h1>Sidemex ia</h1>
+        </li>
+        <li>
+            <img src="Assets/images/sidemex-ia-3.jpg">
+        </li>
+    </ul>
+</div>
+<!-- Compiled and minified JavaScript -->
+<script>
+    var options = {
+        indicators:true,
+        height:500,
+        duration:500,
+        interval:6000
+
+    };
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.slider');
+        var instances = M.Slider.init(elems, options);
+    });
+    //M.AutoInit();
+</script>
 
 <%- include('inc/footer.ejs') %>
 
