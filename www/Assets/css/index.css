@@ -6,3 +6,32 @@
 .inicerebro{
   padding-top: 250px;
 }
+
+@media (max-width:768px){
+  #movil{
+    display:inline;
+  }
+}
+
+@media (min-width:768px){
+  #movil{
+    display:none;
+  }
+
+}
+
+#text{
+  font-size: 19px;
+  text-align: justify;
+}
+
+#logotipo{
+  margin-left: 40px;
+}
+
+html {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+}

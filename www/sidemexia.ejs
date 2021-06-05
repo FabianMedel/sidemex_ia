@@ -3,7 +3,7 @@
 
 <%- include('login.ejs') %>
 <%- include('register.ejs') %>
-
+<!--Begin Slider-->
 <div class="slider">
     <ul class="slides">
         <li>
@@ -34,8 +34,150 @@
         </li>
     </ul>
 </div>
+<!--End Slider-->
+
+<div class="container" id="movil">
+    <br/>
+    <div class="row">
+        <div class="col s6 center-align "><a href="#mRegister" class="waves-effect waves-light btn white modal-trigger flow-text" id="button2-register"><i class="material-icons left">app_registration</i>Iniciar Sesión</a></div>
+        <div class="col s6 center-align "><a href="#mlogin" class="waves-effect waves-light btn modal-trigger flow-text" id="button2-sesion"><i class="material-icons left">account_circle</i>Iniciar Sesión</a></div>
+    </div>
+</div>
+<!--Begin Quienes somos-->
+<div class="container">
+    <div class="row">
+        <div class="col s3 "></div>
+        <div class="col s6 "><h3 class="light-blue-text text-darken-4 center-align">¿Quiénes Somos?</h3></div>
+        <div class="col s3 "></div>
+    </div>
+    <div class="row">
+        <div class="col s1 "></div>
+        <div class="col s10 center-align flow-text">Somos dos estudiantes pertenecientes a la Universidad Autonoma de la Ciudad de México en la carrera Ingenieria de Software.</h3></div>
+        <div class="col s1 "></div>
+    </div>
+    <div class="row">
+        <!--Rog-->
+        <div class="card-panel col s5">
+            <p class="section center-align">
+                <img src="Assets/images/fab.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </p>
+            <h5 class="center-align">Rubén Arturo Fabián Medel</h5>
+        </div>
+        <!--Espacio-->
+        <div class="col s2"></div>
+        <!--Espacio-->
+        <!--Fab-->
+        <div class="card-panel col s5">
+            <p class="section center-align">
+                <img src="Assets/images/rog.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </p>
+            <h5 class="center-align">Roger Domínguez Hernández</h5>
+        </div>
+    </div>
+    <!--End Quienes somos-->
+    <!--Begin Que es sidemexIA-->
+    <div class="row">
+        <div class="col s3 "></div>
+        <div class="col s6 "><h3 class="light-blue-text text-darken-4 center-align">¿Que es SidemexIA?</h3></div>
+        <div class="col s3 "></div>
+    </div>
+    <div class="row">
+        <div class="col s1 "></div>
+        <div class="col s10 center-align flow-text">Es un sistema de software vía Web que procesa información proveniente de medios de comunicación digitales que informan la incidencia de delitos en el área metropolitana.</div>
+        <div class="col s1 "></div>
+    </div>
+    <div class="row">
+        <div class="col s1 "></div>
+        <div class="col s10 center-align flow-text"><a class="btn btn-floating btn-large pulse"><i class="material-icons">cloud</i></a></div>
+        <div class="col s1 "></div>
+    </div>
+    <!--End Que es sidemexIA-->
+</div>
+
+<!--Begin Parall-->
+<div class="parallax-container">
+    <div class="parallax"><img src="Assets/images/angel.png"></div>
+</div>
+<!--End Parall-->
+
+<br/>
+
+<!--Begin Img cerebro y collaps-->
+<div class="col s12 ">
+    <div class="container">
+        <div class="row">
+            <div class="col s6">
+                <p class="section center-align">
+                    <img src="Assets/images/cerebroia.png" alt="" class="responsive-img"> <!-- notice the "circle" class -->
+                </p>
+            </div>
+            <div class="col s6">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">accessibility_new</i>¿A que ayuda?</div>
+                        <div class="collapsible-body center-align"><span>Muestra a los usuarios un mapa donde los delitos serán contabilizados de acuerdo al año, mes, dia, semana, delito, entidad federativa, alcandia o municipio, colonia o asentamiento y en algunos caos calle, ademas, fuente de información.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">source</i>Antecedentes de SidemexIA</div>
+                        <div class="collapsible-body"><span>La percepción de la inseguridad en la población mexicana va en aumento de acuerdo con el INEGI y su Encuesta Nacional de Seguridad Pública Urbana (ENSU) <a class="blue-text" href="/antecedentes-sidemexia">Saber Más</a>.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">help_outline</i>¿Como funciona SidemexIA?</div>
+                        <div class="collapsible-body"><span>Procesa información proveniente de medios de comunicación digitales que informan la incidencia de delitos en el área metropolitana. Con la finalidad de mostrar a los usuarios un mapa donde los delitos serán contabilizados. Para poder hacer uso del sistema es necesario que el usuario se registre.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">import_contacts</i>Fuentes de Información</div>
+                        <div class="collapsible-body"><span>Las fuentes de información que procesa SidemexIA son provenientes de periódicos, blogs y agencias de noticias estatales en México, todas estas fuentes son en formato digital.</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Img cerebro y collaps-->
+
+<!--Begin Registrar-->
+<div class="col s12 #34cccc" style="background-color: #34cccc;">
+    <div class="container">
+        <div class="row">
+            <div class="col s6 section">
+                <h3 class="white-text">Regístrate y explora nuestras funciones</h3>
+                <p class="white-text flow-text">Regístrate es muy fácil y rápido y obtén información relevante sobre la incidencia delictiva en el área metropolitana, podrás ubicar las zonas con un alto índice delictivo e información relevante.</p>
+                <a class="waves-effect waves-light btn grey darken-2 modal-trigger" href="#mRegister"><i class="material-icons left">app_registration</i>Registrarme</a>
+            </div>
+            <div class="col s6 section">
+                <div><img class="responsive-img" src="Assets/images/marker.png" alt="" width="400" height="300"></div>
+            </div>
+        </div>    
+    </div>        
+</div>
+<!--End Registrar-->
+
+<!--Begin Contactarnos-->
+<div class="col s12">
+    <div class="container">
+        <div class="row">
+            <div class="col s2 section"></div>
+            <div class="col s8 section center-align">
+                <h3 class="black-text">¡Contáctanos!</h3>
+                <p class="flow-text">Tienes alguna comentario, idea o mejora, puedes dejarnos tu email y nos comunicamos contigo.</p>
+
+                <div class="input-field col s12 section center-align">
+                    <i class="material-icons prefix">textsms</i>
+                    <input type="text" id="autocomplete-input" class="autocomplete">
+                    <label for="autocomplete-input">ejemplo@gmail.com</label>
+                </div>
+                
+            </div>
+            <div class="col s2 section"></div>
+        </div>    
+    </div>        
+</div>
+<!--End Contactarnos-->
+
 <!-- Compiled and minified JavaScript -->
 <script>
+    //Begin Slider
     var options = {
         indicators:true,
         height:500,
@@ -48,6 +190,31 @@
         var instances = M.Slider.init(elems, options);
     });
     //M.AutoInit();
+    //End Slider
+    //Begin Collapsible
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('.collapsible').collapsible();
+    });
+    //End Collapsible
+    //Begin Parallx
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('.parallax').parallax();
+    });
+    //End Parallx
 </script>
 
 <%- include('inc/footer.ejs') %>

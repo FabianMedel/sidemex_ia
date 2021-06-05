@@ -8,3 +8,14 @@
     border-radius: 8px;
     will-change: top, opacity:0.90;
 }
+
+#mRegister {
+  left: 0;
+  right: 0;
+  background-color: #f5f5f0;
+  padding: 0;
+  max-height: 41em;
+  width: 30em;
+  border-radius: 8px;
+  will-change: top, opacity:0.90;
+}

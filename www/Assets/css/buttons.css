@@ -1,25 +1,35 @@
-#button-register{
+/*#button-register{
 	width: 10em;
 	height: 3em; 
-	border-style: 
-	double; 
-	color: #004d99; 
+	border-style: double; 
+	color: #3366CC; 
 	border-radius: 25px;
 }
 
 #button-sesion{
-	width: 12em; 
+	width: 11em; 
 	height: 3em;  
 	color: #cfd8dc; 
 	border-radius: 25px;
-	background-image: linear-gradient(to right, #4b6cb7 0%, #182848 51%, #4b6cb7 100%)
+	background-image: linear-gradient(to right, #4b6cb7 0%, #3366CC 51%, #4b6cb7 100%)
+}*/
+
+#button2-register{
+	border-style: double; 
+	color: #3366CC; 
+	border-radius: 25px;
 }
 
+#button2-sesion{
+	border-radius: 25px;
+	background-image: linear-gradient(to right, #4b6cb7 0%, #3366CC 51%, #4b6cb7 100%);
+
+}
 
 #button-sesion:hover { background-position: right center; }
 
 #sess{
-	background-color: #003366; 
+	background-color: #3366CC; 
 	border-radius: 25px;"
 }
 

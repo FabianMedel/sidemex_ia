@@ -1,0 +1,332 @@
+<%- include('inc/headadmin.ejs') %>
+<%- include('inc/headeradmin.ejs') %>
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START MAIN -->
+    <div id="main">
+      <!-- START WRAPPER -->
+      <div class="wrapper">
+        <!-- START LEFT SIDEBAR-->
+        <aside id="left-sidebar-nav">
+          <ul id="slide-out" class="side-nav fixed leftside-navigation">
+            <li class="user-details cyan darken-2">
+              <div class="row">
+                <div class="col col s4 m4 l4">
+                  <img src="Assets/images/avatar/avatar.png" alt="" class="circle responsive-img valign profile-image cyan">
+                </div>
+                <div class="col col s8 m8 l8">
+                  <ul id="perfil-izquierdo" class="dropdown-content">
+                    <li>
+                      <a href="#" class="grey-text text-darken-1">
+                        <i class="material-icons">face</i>Perfil</a>
+                    </li>
+                    <li>
+                      <a href="#" class="grey-text text-darken-1">
+                      <i class="material-icons">keyboard_tab</i>Cerrar Sesión</a>
+                    </li>
+                  </ul>
+                  <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="perfil-izquierdo">Nombre<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                  <p class="user-roal">Participante</p>
+                </div>
+              </div>
+            </li>
+            <li class="no-padding">
+              <ul class="collapsible" data-collapsible="accordion">
+                <li class="bold">
+                  <a href="index.html" class="waves-effect waves-cyan">
+                      <i class="material-icons">pie_chart_outlined</i>
+                      <span class="nav-text">Escritorio</span>
+                    </a>
+                </li>
+                <div class="divider"></div>
+                <li class="bold">
+                  <a href="#" class="waves-effect waves-cyan">
+                      <i class="material-icons">cast</i>
+                      <span class="nav-text">Filtro 1</span>
+                    </a>
+                </li>
+                <li class="bold">
+                  <a href="#" class="waves-effect waves-cyan">
+                      <i class="material-icons">insert_link</i>
+                      <span class="nav-text">Filtro 2</span>
+                    </a>
+                </li>
+                <li class="bold">
+                  <a href="#" class="waves-effect waves-cyan">
+                      <i class="material-icons">format_color_text</i>
+                      <span class="nav-text">Filtro 3</span>
+                    </a>
+                </li>
+                <li class="bold">
+                  <a href="#" class="waves-effect waves-cyan">
+                      <i class="material-icons">format_size</i>
+                      <span class="nav-text">Filtro 4</span>
+                    </a>
+                </li>
+                <li class="bold">
+                  <a href="#" class="waves-effect waves-cyan">
+                      <i class="material-icons">invert_colors</i>
+                      <span class="nav-text">Filtro 5</span>
+                    </a>
+                </li>
+                <li class="bold">
+                  <a href="#" class="waves-effect waves-cyan">
+                      <i class="material-icons">border_all</i>
+                      <span class="nav-text">Filtro 6</span>
+                    </a>
+                </li>
+                <li class="bold">
+                  <a href="#" class="waves-effect waves-cyan">
+                    <i class="material-icons">lightbulb_outline</i>
+                    <span class="nav-text">Filtro 7</span>
+                  </a>
+                </li>
+ 
+                <li>
+                  <a class="btn waves-effect waves-light gradient-45deg-red-pink" href="#" target="_blank">
+                    <i class="material-icons white-text">file_upload</i>Filtrar
+                  </a>
+                </li>
+                <li>
+                  <a class="btn waves-effect waves-light gradient-45deg-red-pink" href="#" target="_blank">
+                    <i class="material-icons white-text">file_upload</i>Limpiar Filtros
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only">
+            <i class="material-icons">menu</i>
+          </a>
+        </aside>
+        <!-- END LEFT SIDEBAR NAV-->
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+        <!-- START CONTENT -->
+        <section id="content">
+          <!--start container-->
+          <div class="container">
+            <!--cards estados start-->
+            <div id="card-stats">
+              <div class="row mt-1">
+                <div class="col s12 m6 l3">
+                  <div class="card gradient-45deg-light-blue-cyan gradient-shadow min-height-100 white-text">
+                    <div class="padding-4">
+                      <div class="col s7 m7">
+                        <i class="material-icons background-round mt-5">assignment_ind</i>
+                        <p>Homicidio</p>
+                      </div>
+                      <div class="col s5 m5 right-align">
+                        <h5 class="mb-0">690</h5>
+                        <p class="no-margin">Homicidios</p>
+                        <p>6,00,00</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l3">
+                  <div class="card gradient-45deg-red-pink gradient-shadow min-height-100 white-text">
+                    <div class="padding-4">
+                      <div class="col s7 m7">
+                        <i class="material-icons background-round mt-5">mood_bad</i>
+                        <p>Robo</p>
+                      </div>
+                      <div class="col s5 m5 right-align">
+                        <h5 class="mb-0">1885</h5>
+                        <p class="no-margin">Robos</p>
+                        <p>1,12,900</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l3">
+                  <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text">
+                    <div class="padding-4">
+                      <div class="col s7 m7">
+                        <i class="material-icons background-round mt-5">face</i>
+                        <p>Feminicidio</p>
+                      </div>
+                      <div class="col s5 m5 right-align">
+                        <h5 class="mb-0">80</h5>
+                        <p class="no-margin">Feminicidios</p>
+                        <p>3,42,230</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l3">
+                  <div class="card gradient-45deg-green-teal gradient-shadow min-height-100 white-text">
+                    <div class="padding-4">
+                      <div class="col s7 m7">
+                        <i class="material-icons background-round mt-5">people</i>
+                        <p>Secuestro</p>
+                      </div>
+                      <div class="col s5 m5 right-align">
+                        <h5 class="mb-0">890</h5>
+                        <p class="no-margin">Secuestros</p>
+                        <p>25,000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Start noticias y mapa-->
+            <div id="work-collections">
+              <div class="row">
+                <!--Start noticias-->
+                <div class="col s12 m12 l6">
+                  <ul id="issues-collection" class="collection z-depth-1">
+                    <li class="collection-item avatar">
+                      <i class="material-icons red accent-2 circle">bug_report</i>
+                      <h6 class="collection-header m-0">Noticias</h6>
+                      <p>Estos son los resultados de tu selección</p>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s7">
+                          <p class="collections-title">
+                            <strong>#ID</strong> Titulo de la noticia</p>
+                          <p class="collections-content">Fuente</p>
+                        </div>
+                        <div class="col s2">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Leer</button>
+                        </div>
+                        <div class="col s3">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Ubicar</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s7">
+                          <p class="collections-title">
+                            <strong>#ID</strong> Titulo de la noticia</p>
+                          <p class="collections-content">Fuente</p>
+                        </div>
+                        <div class="col s2">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Leer</button>
+                        </div>
+                        <div class="col s3">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Ubicar</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s7">
+                          <p class="collections-title">
+                            <strong>#ID</strong> Titulo de la noticia</p>
+                          <p class="collections-content">Fuente</p>
+                        </div>
+                        <div class="col s2">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Leer</button>
+                        </div>
+                        <div class="col s3">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Ubicar</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s7">
+                          <p class="collections-title">
+                            <strong>#ID</strong> Titulo de la noticia</p>
+                          <p class="collections-content">Fuente</p>
+                        </div>
+                        <div class="col s2">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Leer</button>
+                        </div>
+                        <div class="col s3">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Ubicar</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s7">
+                          <p class="collections-title">
+                            <strong>#ID</strong> Titulo de la noticia</p>
+                          <p class="collections-content">Fuente</p>
+                        </div>
+                        <div class="col s2">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Leer</button>
+                        </div>
+                        <div class="col s3">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Ubicar</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s7">
+                          <p class="collections-title">
+                            <strong>#ID</strong> Titulo de la noticia</p>
+                          <p class="collections-content">Fuente</p>
+                        </div>
+                        <div class="col s2">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Leer</button>
+                        </div>
+                        <div class="col s3">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Ubicar</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s7">
+                          <p class="collections-title">
+                            <strong>#ID</strong> Titulo de la noticia</p>
+                          <p class="collections-content">Fuente</p>
+                        </div>
+                        <div class="col s2">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Leer</button>
+                        </div>
+                        <div class="col s3">
+                          <button class="btn-small waves-effect waves-blue" type="submit" name="action">Ubicar</button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--end noticias-->
+
+                <!--start mapa-->
+                <div class="col s12 m12 l6">
+                  <ul id="projects-collection" class="collection z-depth-1">
+                    <li class="collection-item avatar">
+                      <i class="material-icons cyan circle">room</i>
+                      <h6 class="collection-header m-0">Mapa</h6>
+                      <p>Ubicación de noticias</p>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s12">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.672749525838!2d-99.14472448561604!3d19.555658341802737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f70bb7cb0f13%3A0x36d9f33d3ebb2e98!2sUACM%20Plantel%20Cuautepec!5e0!3m2!1ses-419!2smx!4v1622424300301!5m2!1ses-419!2smx" width="480" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <!--end mapa-->
+              </div>
+            </div>
+            <!--end noticias y mapa-->
+            
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+          </div>
+          <!--end container-->
+        </section>
+        <!-- END CONTENT -->
+        
+      </div>
+      <!-- END WRAPPER -->
+    </div>
+    <!-- END MAIN -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+
+<%- include('inc/footeradmin.ejs') %>

@@ -53,13 +53,13 @@ app.get('/', async function(req,res){
 });
 
 app.post('/auth',async function(req, res) {
-	var username = req.body.username;
-	var password = req.body.password;
+	let username = req.body.username;
+	let password = req.body.password;
 	req.session.logged = false;
 
 	if (username && password) {
 		dcConnection = await utils.createConnection(utils.sia_local);
-		splashResponse = await utils.signin(dcConnection,username,password,req);
+		splashResponse = await utils.login(dcConnection,username,password,req);
 		res.json(splashResponse)
 		res.end();
 	} else {
@@ -68,8 +68,24 @@ app.post('/auth',async function(req, res) {
 	}
 });
 
-app.get('/home', function(req, res) {
+
+app.post('/signin', async function(req, res){
+	let userName = req.body.username;
+	let lastName = req.body.last_name;
+	let email = req.body.mail;
+	let password = req.body.password;
+	
+	if (userName && password && lastName && email) {
+		dcConnection = await utils.createConnection(utils.sia_local);
+		splashResponse = await utils.signin(dcConnection,userName,lastName,email,password);
+		res.json(splashResponse)
+		res.end();
+	}
+});
+
+app.get('/home',async function(req, res) {
 	sess=req.session;
+	console.log(sess)
 	if(sess.logged){
 		res.render('home.ejs');
 	}else{
@@ -77,13 +93,25 @@ app.get('/home', function(req, res) {
 	}
 });
 
+app.get('/antecedentes-sidemexia',async function(req, res) {
+	res.render('antecedentes-sidemexia.ejs');
+});
+
+app.get('/como-funciona',async function(req, res) {
+	res.render('como-funciona.ejs');
+});
+
+app.get('/admin-user',async function(req, res) {
+	res.render('admin-user.ejs');
+});
 
 
-app.get('/logout',function(req,res){
-	req.session.destroy(function(err){
+app.get('/logout',async function(req,res){
+	req.session.destroy(async function(err){
 		if(err){
 			console.log(err);
 		} else {
+			console.log("aui perro")
 			res.redirect('/');
 		}
 	});
@@ -93,6 +121,6 @@ var server = app.listen(process.env.PORT, function(){
 	console.log('server running on ' + process.env.PORT);
 });
 
-app.get('/index', (req, res) => {
+/*app.get('/index', (req, res) => {
  res.render("index")
-})
+})*/

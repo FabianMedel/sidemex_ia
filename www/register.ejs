@@ -9,27 +9,27 @@
             <div class="row">  
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_device" type="text" class="validate" name="nombre" required="" >
-                    <label for="icon_device">Nombre</label>
+                    <input " type="text" class="validate" name="nombre" id="nreg"required="" >
+                    <label for="nreg">Nombre</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate" name="apellido" required="" >
-                    <label for="last_name">Apellidos</label>
+                    <input id="lnreg" type="text" class="validate" name="apellido" required="" >
+                    <label for="lnreg">Apellidos</label>
                 </div>
             </div>
             <div class="row"> 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">mail</i>
-                    <input id="mailf" type="text" class="validate" name="email" required="" placeholder="usuario@mail">
-                    <label for="mailf">E-mail</label>
+                    <input id="mailreg" type="text" class="validate" name="email" required="" placeholder="usuario@mail">
+                    <label for="mailreg">E-mail</label>
                     <span class="helper-text" data-error="wrong" data-success="right" id="messgeCV"><center>Correo</center></span>
                 </div>
             </div>
             <div class="row"> 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
-                    <input id="passV" type="password" class="validate" name="contrasena" required="">
-                    <label for="passV">Contraseña</label>
+                    <input id="passreg" type="password" class="validate" name="contrasena" required="">
+                    <label for="passreg">Contraseña</label>
                 </div>
                 <div id="res"></div>
             </div>
@@ -43,5 +43,24 @@
 <script>
     $(document).ready(function(){
         $('.modal').modal();
+        
+        $('#sendReg').click( function(){
+            let user = $("#nreg").val();
+            let last_name = $("#lnreg").val();
+            let mail = $("#mailreg").val();
+            let pass = $("#passreg").val();
+          
+            if(user != "" && last_name != "" && mail!= "" && pass != ""){
+               
+           $.post("signin",{username:user, last_name:last_name,mail:mail,password:pass},function(data,status){
+                if(data.status ==='done'){
+                    $('#res').empty().html('<center><p>¡Registro exitoso!</p></center>');
+                //window.location.href="/home";
+                }else if (data.status === 'failed') {
+                    $('#res').empty().html('<center><p>El usuario ya esta registrado</p></center>');
+                }
+            });
+            }
+        });
     });
 </script>
